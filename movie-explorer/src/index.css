@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #150E17;
+  color: #F3EEE6;
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* Visible keyboard focus everywhere, styled to match the marquee accent */
+:focus-visible {
+  outline: 2px solid #E3A857;
+  outline-offset: 2px;
+}
+
+/* Slim, on-brand scrollbar for the horizontal filmstrip decorations */
+.filmstrip::-webkit-scrollbar {
+  height: 6px;
+}
+.filmstrip::-webkit-scrollbar-thumb {
+  background: #7A2E3A;
+  border-radius: 999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
